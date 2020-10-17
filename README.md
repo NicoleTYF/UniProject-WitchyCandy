@@ -47,7 +47,7 @@
   <td> 
     <b>DIY Recipes<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/DIY_ideas.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/CellPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>List dessert receipes children can try making with their parents </li><li>Like the by pressing the button with a heart icon</li></td>
+  <td width="350"><li>List dessert receipes children can try making with their parents </li><li>Like the recipe by pressing the button with a heart icon</li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_recipes_screenshot.PNG" height="200"/></td>
 </tr>
 
