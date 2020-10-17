@@ -1,9 +1,9 @@
-# 🍬 Witchy Candy
+# 🍬 Witchy Candy 🍭
 
 &emsp; 🎯 **Purpose:** <br> 
 &emsp;&emsp;&emsp;To educate children how to eat healthily. <br>
 &emsp; 📐 **Scope:**   <br> 
-&emsp;&emsp;&emsp;Build a webite with diet tips, recipies and games about how to eat healthily. <br>
+&emsp;&emsp;&emsp;Build a webite with diet tips, recipies, decorating and hidden-object games. <br>
 &emsp; 🧰 **Tool Stack:**   <br>
 &emsp;&emsp;&emsp;HTML5, CSS3, JS, jQuery 
 <br>
@@ -13,7 +13,7 @@
 &emsp; 🎨  Write design style guides<br>
 &emsp; 👩‍💻 Coding the website<br>
 &emsp; 🧪 User testing <br>
-&emsp; 📃 Write design style guides<br>
+&emsp; 📃 Document development process including what I have learnt about web design<br>
 
 <br>
 
@@ -21,41 +21,49 @@
 <table>
 <tr>
   <td> 
-    <b>Dashboard<br>(<a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/templates/cdei/dashboard_enterprise.html">html</a>, <a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/static/cdei/css/dashboard.css">css</a>)</b>  
+    <b>Health Tips<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Health_tips.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/ArticlesPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>Overview of the data collected </li></td>
-  <td><img src="https://github.com/NicoleTYF/ClearData-web/blob/master/dashboard_screenshot.PNG" height="200"/></td>
+  <td width="350"><li>Health Tips for children </li><li>Side navigation for easier reading </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_healthTips_screenshot.PNG" height="200"/></td>
 </tr>
   
 <tr>
   <td> 
-    <b>Purchase Data form<br>(<a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/templates/cdei/purchase_data.html">html</a>, <a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/static/cdei/css/tablePage.css">css</a>)</b>  
+    <b>Search window<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Health_tips.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/js/script.js">js</a>)</b>  
   </td>
-  <td width="350"><li>A form for enterprises to choose what data they want to buy </li></td>
-  <td><img src="https://github.com/NicoleTYF/ClearData-web/blob/master/purchaseData_screenshot.PNG" height="200"/></td>
+  <td width="350"><li>Word search in Health Tips and About Us page </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_search_screenshot.PNG" height="200"/></td>
 </tr>
   
 <tr>
   <td> 
-    <b>Your Databank<br>(<a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/templates/cdei/your_databank.html">html</a>, <a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/static/cdei/css/tablePage.css">css</a>)</b>  
+    <b>Healthy Sweets and Desserts<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Sweets_Desserts.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/CellPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>View data purchased and download them as CSV files </li></td>
-  <td><img src="https://github.com/NicoleTYF/ClearData-web/blob/master/yourDatabank_screenshot.PNG" height="200"/></td>
+  <td width="350"><li>A form for enterprises to choose what data they want to buy </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_sweet_screenshot.PNG" height="200"/></td>
+</tr>
+  
+<tr>
+  <td> 
+    <b>DIY Recipes<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/DIY_ideas.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/CellPages.css">css</a>)</b>  
+  </td>
+  <td width="350"><li>List dessert receipes children can try making with their parents </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_recipes_screenshot.PNG" height="200"/></td>
 </tr>
 
 <tr>
   <td> 
-    <b>Analytics Tool<br>(<a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/templates/cdei/analytics_tool.html">html</a>, <a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/static/cdei/css/common.css">css</a>)</b>  
+    <b>Decorating your candy house<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Decor_house.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/Decor_house.css">css</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/js/script.js">js</a>)</b>  
   </td>
-  <td width="350"><li>A form for enterprises to choose what data they want to buy </li></td>
-  <td><img src="https://github.com/NicoleTYF/ClearData-web/blob/master/analyticsTool_screenshot.PNG" height="200"/></td>
+  <td width="350"><li>Drag and Drop healthy sweets and desserts to decorate the candy house </li><li>Drag and Drop healthy sweets and desserts </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_decor_screenshot.PNG" height="200"/></td>
 </tr>
 
 <tr>
   <td> 
-    <b>How It Works<br>(<a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/templates/cdei/how_it_works.html">html</a>, <a href="https://github.com/NicoleTYF/ClearData-web/blob/master/cdei/static/cdei/css/home_not_signed_in.css">css</a>)</b>  
+    <b>Hidden Object game<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/js/script.js">js</a>)</b>  
   </td>
-  <td width="350"><li>A form for enterprises to choose what data they want to buy </li></td>
-  <td><img src="https://github.com/NicoleTYF/ClearData-web/blob/master/howItWorks_screenshot.PNG" height="200"/></td>
+  <td width="350"><li>Collect 6 hidden objects (moving emojis) in the website </li><li>Reset game </li></td>
+  <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_hiddenObject_screenshot.PNG" height="200"/></td>
 </tr>
 </table>
