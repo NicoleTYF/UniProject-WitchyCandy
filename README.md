@@ -9,7 +9,7 @@
 <br>
 
 &emsp; **What I have done:** <br>
-&emsp; 🖼 [Wireframes](https://xd.adobe.com/view/f304c61e-5c45-413b-a699-0bbdd010f2ba-a657/) <br>
+&emsp; 🖼 Wireframes <br>
 &emsp; 🎨  Write design style guides<br>
 &emsp; 👩‍💻 Coding the website<br>
 &emsp; 🧪 User testing <br>
@@ -67,3 +67,24 @@
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_hiddenObject_screenshot.PNG" height="200"/></td>
 </tr>
 </table>
+
+## Marker feedback
+87/100 <br>
+
+**Website Implementation:** 
+* Website Completion: High Distinction - Mid; 
+* Good Practice Web Design: Credit - Low; 
+* HTML Usage: Credit - High; 
+* CSS Usage: High Distinction - Borderline; 
+* jQuery/JavaScript Usage: High Distinction - Mid
+
+**Design Report**
+* Audience, Education & Story: High Distinction - Mid; 
+* Design Justification: High Distinction - Mid; 
+* Design Research: High Distinction - Mid; 
+* Design Reflection: High Distinction - Mid; 
+* Report Design, Structure & Writing: High Distinction - Mid; 
+
+> Hey Nicole, Good job with both the design report and the website implementation. Why are you using JS for navigation? You should be utilising HTML, i.e. elements. I think that if you had less content on your website, you would have been able to spend more time polishing the overall website. Also just to note IDs are single-use, classes can be used multiple times. Regardless, you did a good job. If it interests you, I think that you would do quite well working within the web industry (as a designer or developer), so keep practicing and keep up the good work. 
+> Hey Nicole, Good job with both the design report and the website implementation. Why are you using JS for navigation? You should be utilising HTML, i.e. elements. I think that if you had less content on your website, you would have been able to spend more time polishing the overall website. Also just to note IDs are single-use, classes can be used multiple times. Regardless, you did a good job. If it interests you, I think that you would do quite well working within the web industry (as a designer or developer), so keep practicing and keep up the good work. 
+> Hey Nicole, Good job with both the design report and the website implementation. Why are you using JS for navigation? You should be utilising HTML, i.e. elements. I think that if you had less content on your website, you would have been able to spend more time polishing the overall website. Also just to note IDs are single-use, classes can be used multiple times. Regardless, you did a good job. If it interests you, I think that you would do quite well working within the web industry (as a designer or developer), so keep practicing and keep up the good work. 
