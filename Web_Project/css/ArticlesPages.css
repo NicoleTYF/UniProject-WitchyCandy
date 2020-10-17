@@ -1,0 +1,142 @@
+﻿.bigBanner {
+	left:  -42px;
+	width:  100%;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    width:        96.97%;
+    margin-left: -2px;
+}
+
+.navbar li {
+	left: 20px;
+}
+
+/* CONTENT */
+.mid {
+	width:  900px; 	
+	margin: 0 auto;    
+}
+
+/*_____________________________________________________________________*/
+/* LEFT NAVIGATION BROWN BOX */
+.List {
+	flex:			   3;
+	color:             white; 	
+	order:             1;
+	bottom:     	   0;
+	position:		   relative;
+	overflow:          hidden; 
+	font-size:         20px;
+	text-align:        center;
+	transition:        all 0.4s;
+	padding-top:       20px;
+	background-color:  #6e030b;
+}
+
+.List ol {
+	width:   80%;
+	padding: -20px 0 0 0;
+}
+
+.List li:first-of-type {
+	margin-top:  8px; 
+}
+
+.List li {
+	color:        white; 
+	padding: 	  8px 2px;
+	font-size:    15px;
+	text-align:   center; 
+	font-family: 'Nunito';
+}
+
+.List li:hover {
+	transition:       all 0.4s;
+	background-color: #F5313E;
+}
+
+/* RIGHT WHITE BOX */
+.Tips {
+	flex:			  7;
+	width:            100%;
+	order:			  2;
+	margin:           auto;	
+	margin-bottom:	  100px;
+	padding:          40px;	
+	overflow:         hidden; 	
+	margin-top:       -20px;
+	padding-top:      30px;
+	background-color: #fffef2;
+}
+
+/* TIPS */
+.Tips article:first-of-type {
+	padding-top: 30px;
+}
+
+.Tips article {
+	padding:     30px;
+	line-height: 40px;
+}
+
+.Tips header {
+	color:       #de2828;
+	font-size:   27px;
+	text-align:  center;
+	margin-left: 0;	
+	font-weight: bold;
+	font-family: 'Nunito';
+}
+
+#tipTitle {
+	color:        gold;
+	margin-top:   26px; 
+	margin-right: 30px; 
+}
+
+/*_____________________________________________________________________*/
+@media only screen and (max-width:500px) {
+	
+	.navbar {
+		height:  328px;
+	}	
+	
+	.navbar li {
+		top:   54px;
+		left: -42px;'
+	}
+	/*_______________________________________________*/
+	.bigBanner {
+		width:       600px;
+		height:      360px;
+        overflow:    hidden;
+        transition:  0.4s;
+		min-height:  360px;
+		margin-top: -24px;
+	}
+
+    .mid {
+        width:        600px;
+		margin-top:   10px;
+		margin-left: -48px;
+    }
+	
+	.List {
+		flex: 4;
+	}
+	
+	.List li {
+		width:        140px;
+		margin-left:  6px;
+	}
+	
+	.Tips article {		
+		width: 310px;
+		margin-left: -30px;
+	}
+}
+
+
+

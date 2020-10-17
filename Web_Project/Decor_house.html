@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link REL="SHORTCUT ICON" HREF="images/logo.png">
+
+    <title>Candy House</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css">  
+    <link href="css/Decor_house.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Noto+Sans|Nunito|Open+Sans+Condensed:300" rel="stylesheet">
+	
+	<!-- jQuery Reference: 
+			The jQuery Foundation.(n.d.). Draggable. Retreived from https://jqueryui.com/draggable/ -->
+	<script src="js/jquery-ui.css"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+	<script src="js/script.js"></script>
+
+<head>
+
+<body id="body">
+
+	<!-- Tool Bar -->
+    <div class="toolbar" id="toolBar">
+
+        <!-- HOME button on the top-left -->
+		<div id= "home_btn" onclick="window.location.href='index.html'" title="Back to home">
+			<img src="images/logo.png" id="logo" height="64" width="68" 
+				alt= "image of a ginger bread house" /> 
+			<span id= "home_text">HOME</span>
+		</div>
+		
+		<!-- LOGO in the middle -->
+		<img src="images/logo_text.png" id="logo_s" height="64" width="74" 
+		title="logo" alt="logo image"/> 
+
+    </div>
+
+	<!-- Content -->
+	<div class="mid" id="mid">
+
+		<!-- Left box to drag and drop candies -->
+		<section class="toolBox">
+			<img id="previous" src="images/previousBtn.png" title="previous page" alt="image of up arrow"/>
+			<img id="next" src="images/nextBtn.png" title="next page" alt="image of down arrow"/>		
+			
+			<div class="collection" id="c1">
+				<img class="ui-widget-content" id="dragItem1" src= "images/cake_t.png"  title="cake"      alt="image of cake"/>
+				<img class="ui-widget-content" id="dragItem2" src= "images/candy_t.png" title="candy"     alt="image of candy"/> 
+				<img class="ui-widget-content" id="dragItem3" src= "images/loli_t.png"  title="lolipop"   alt="image of lolipop"/>
+				<img class="ui-widget-content" id="dragItem4" src= "images/ice_t.png"   title="ice cream" alt="image of ice-cream"/>
+				<img class="ui-widget-content" id="dragItem5" src= "images/choco_t.png" title="chocolate" alt="image of chocolate"/>
+				<img class="ui-widget-content" id="dragItem6" src= "images/donut_t.png" title="donut"     alt="image of donut"/>
+			</div>	
+			
+			<div id="toolBoxBg"> </div> 
+			
+			<div class="collection" id="c2">
+				<img class="ui-widget-content" id="dragItem7"  src= "images/salad.png"   title="salad" alt="image of swirl candy"/>
+				<img class="ui-widget-content" id="dragItem8"  src= "images/bowl.png" title="cereal"       alt="image of candy"/> 
+				<img class="ui-widget-content" id="dragItem9"  src= "images/swirl.png"  title="lolipop"     alt="image of lolipop"/>
+				<img class="ui-widget-content" id="dragItem10" src= "images/custard.png"   title="ice cream"   alt="image of ice-cream"/>
+				<img class="ui-widget-content" id="dragItem11" src= "images/limecheesecake.png" title="chocolate"   alt="image of chocolate"/>
+				<img class="ui-widget-content" id="dragItem12" src= "images/honey.png" title="donut"       alt="image of donut"/>
+			</div>
+		</section>
+	
+		<!-- Right box to decorate the house -->
+		<section class="decorate">
+			<header id= "title" > DECORATE YOUR HOUSE!</header>
+			<img  id="decoImg_house" src= "images/logo.png" title="image of the house" alt="image of the house"/>
+			
+			<img id="decoImg_witch" src= "images/witch.png"  title="the witch" height="110px" width="120px"
+				alt="image of the witch"/>
+				
+			<img id="decoImg_gretel" src= "images/gretel.png"  title="Hansel" height="60px" width="30px"
+				alt="image of Gretel"/>
+			<img id="decoImg_hansel" src= "images/hansel.png"  title="Hansel" height="60px" width="30px"
+				alt="image of Hansel"/>
+			<footer id="finishBox">
+				<button id="finishBtn" title="click when you have done decorating.">FINISH! </button>
+			</footer>
+		</section>
+	</div>
+
+
+</body>
+</html>
+

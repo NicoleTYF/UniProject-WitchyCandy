@@ -1,0 +1,828 @@
+﻿body {
+    top:        	  0;
+	float:      	  center;
+	margin:     	  0 auto;
+	position:   	  absolute;
+	min-width:  	  1311px;
+    margin-top: 	  0px; 
+	background-color: #f5f8f2; /* chiffon colour */
+}
+
+
+html {
+    float:             center;
+	width:  	       1305px;
+	margin:		       0 auto;
+	cursor:            url("images/lolipop.png"), auto;	
+	position:          relative;
+	overflow-x:        hidden;
+    background-size:   cover;	
+	scroll-behavior:   smooth;
+    background-repeat: no-repeat;
+}
+
+/* TEXTS TURNS LIGHT RED WHEN SELECTED */
+::selection {
+    background-color: rgba(242, 131, 75, 0.42); /* light red 42% transparent */
+}
+
+hr {
+	width:       80%; 
+	margin-left: 10%
+}
+
+/*_________________________________________________________*/
+/* TOOLBAR */
+.toolbar {
+    top:              0px;
+    left:             0;
+    width:            100%;
+	height:           71px;
+    z-index:          30;
+	padding:          0px 0px 0px;
+    position:         fixed;
+    min-height:       62px;
+    font-weight:      bold;
+    background-color: #85020a; /* crimson colour */
+}
+
+/* TOOLBAR BUTTONS */
+.toolBarBtns {
+    top:      -70px;	/* 58% from top*/
+	left:      16%;
+    right:     3%;
+    width:     30%;
+	float:     right;
+	position:  relative;
+}
+
+#logo {
+	z-index:     1;
+	margin-left: 7%;
+}
+/* HOME BUTTON */
+#home_btn {
+    top:               1px;
+	left:              71px;
+    width:             170px;
+    z-index:           12;
+    position:          relative;
+	transition:        all 0.4s;
+	font-family:      'EB Garamond';
+	background-color:  rgba(155, 5, 5, 80);   /* peach red */
+}
+
+/* button on hover, changes color to lighter red */
+#home_btn:hover {
+	background-color: rgba(185, 75, 45, 80);	
+}
+
+/* "HOME" TEXT */
+#home_text {
+	color:       white;
+	opacity:     1;
+	z-index:     2;
+	position:    absolute;	
+	font-size:   18px;
+	margin-top:  13.4%;
+	margin-left: 6%;
+}
+
+/* "WITCH CANDY" TEXT IN THE MIDDLE */
+#logo_s {
+    z-index:        21;	
+	margin-top:    -80px;
+    margin-left  :  48%;
+	margin-bottom:  20px;
+}
+
+/* SEARCH BAR */
+#websearchField {    
+    float:               right;
+    color:               black;
+	width:               0%;
+	height:              35px;
+    border:              3px #ddd solid;	
+	display: 			 none;
+	padding:             12px 20px 12px 60px;
+	font-size:           21px;
+	margin-top:          3px;
+	margin-right:        100%;
+    background-image:    url("../images/search.png");
+    background-repeat:   no-repeat;
+    background-size:     43px;
+    background-position: 3px 7px;
+    background-color:    white;
+	transition:          width 0.5s ease-in-out;
+    -webkit-transition:  width 0.5s ease-in-out;
+}
+
+#websearchField::placeholder {
+    color: #8a8a8a;	  /* dark gray */
+}
+
+/* SEARCH BUTTON */
+#websearchbtn {
+    top:              0px;
+    width:            31px;
+	height:           30px;
+	border:           none;
+	padding:          21.49px;
+	position:         absolute;
+	transition:       all 0.4s;
+    margin-left:      87px;
+    text-decoration:  none;
+	background-color: #e0220d;	/* bright red */ 
+}
+
+#websearchbtn:hover {
+	background-color: #f22f26;
+}
+
+#websearchField.expand {
+	display:                          block;  
+	animation-name:                   expandAnim;
+	animation-duration:               0.6s;
+	animation-fill-mode:              forwards;
+   -webkit-animation-name:            expandAnim;    /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration:        0.6s;          /* Safari 4.0 - 8.0 */
+   -webkit-animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+#websearchField.expand:after {
+	width: 200%;
+}
+
+@keyframes expandAnim{
+	from 0% {
+		width: 0%;
+	} to {
+		width: 198%;
+	}
+}
+
+@-webkit-keyframes expandAnim{
+	from 0% {
+		width: 0%;
+	} to {
+		width: 198%;
+	}
+}
+
+/* SEARCH WINDOW */
+.searchWindow {
+    top:              70px;
+    left:             0;
+    width:            100%;
+	height:           0%;
+	z-index:          14;
+    position:         fixed;
+	overflow:         hidden;
+	transition:       0.5s;
+	background-color: rgba(255, 255, 255, 0.9); /* white 90% transparent */
+}
+
+.searchContent {
+    top:          0%;
+    width:        100%;
+    position:     auto;
+	min-height:   100%;
+    text-align:   center;
+    margin-top:   30px;
+	margin-left: -80%;
+}
+
+.container {
+	top:            30px;
+	left:           2%;
+	color:          black;
+	width:          90%;
+	height:         900px;
+	padding:        20px 120px 20px 20px;
+    position:       absolute;
+    text-align:     left;
+    margin-top:    -30px;
+    margin-left:    0%;
+	border-radius:  5px;
+}
+
+.container header {
+	color:        #e0220d;  /* bright red */
+	font-size:    23px;
+	font-family: 'Nunito';
+}
+
+/* DISPLAY RESULT WINDOW */
+#searchList {
+	color:            black;
+	padding: 	 	  27px 12px;
+	font-size:   	  26px;	
+	margin-top:  	 -10px;
+	text-align:  	  left; 	
+	font-family: 	 'Nunito';
+	list-style-type:  none;
+}
+
+#searchList hr {
+	width:        80%;
+	font-size:    32px;	
+	text-align:   left; 
+	margin-left: -2px;
+	font-family: 'Nunito';
+}
+
+#searchList li:hover {	
+	transition:       all 0.4s;
+	background-color: rgba(242, 131, 75, 0.42);
+}
+
+.searchListContent {
+	color:     #aaaa00;  /* greenish-yellow */
+	font-size: 20px;
+}
+
+#noResult {
+	display:   	 none;
+	font-size: 	 32px;	
+	text-align:  center;
+	font-family: 'Nunito';
+}
+
+/* CLOSE BUTTON */
+#closeSearch {
+    top:              10px;
+    right:            280px;
+    color:            gray;
+    border:           none;  
+    z-index:          90;
+    display:          block;
+    padding:          11px 29px 11px 34.8px;
+    position:         absolute;
+    font-size:        40px;
+    transition:       0.4s;
+    text-decoration:  none;
+	background-color: transparent;
+}
+
+#closeSearch:hover {
+    color: red;
+}
+
+/* CONTACT WINDOW */
+.Contact {
+	float:    left;
+	z-index:  99;
+	overflow: hidden;
+}
+
+/* CONTACT BUTTON */
+#contactBtn {
+    top:              0px;
+	width:            31px;
+	height:           30px;
+	padding:          21.49px;
+	position:         absolute;
+	transition:       all 0.4s;
+    margin-left:      8px;
+    background-color: #e84c3a;	/* peach colour */
+}
+#contactBtn:hover, .Contact:hover #contactBtn {
+	background-color: #f08256;
+}
+
+.Contact:hover #contactWindow {	
+	transform:  translateY(257px);
+	transition: all 0.4s;
+}
+#contactWindow {
+	top:         	  -230px;
+	left:        	  -240px;
+	z-index:           99;
+	border:      	   dashed 3px #85020a; /* crimson colour */
+	padding:     	   10px 20px;
+	position:    	   absolute;
+	min-width:         200px;
+	min-height:        160px;
+	box-shadow:        0px 2px 13px 0px rgba(0,0,0,0.3);
+	font-family:      'Helvetica Neue';
+	background-color:  #f9f9f9; /* chiffon colour */
+}
+
+/*_________________________________________________________*/
+.bigBanner {
+    top:        0px;
+	left:       0px;
+	width:      98.3%;
+    height:     310px;
+	z-index:    2;
+	padding:    0;
+    position:   absolute;
+    overflow:   hidden;
+	max-width:  102%;
+}
+
+/* BACKGROUND OF BANNER */
+.fixBg {
+    width:             100%; 
+	opacity:           1;
+	min-height:        100%;
+	background-size:   100% 340px;
+    background-repeat: no-repeat;
+    background-image:  url('../images/slideShowSample2_bg.png'); 
+}
+
+/* TITLE "WITCHY CANDY" IN THE BANNER */
+#mainPageTitle, #mainPageSideText {
+	top:         	 17%;
+	left:        	 40%;
+	z-index:     	 4;
+	font-size:   	 68px;
+}
+#mainPageTitle {
+	margin-left: 	-400px; 
+	margin-top:  	-29px;
+	letter-spacing: -2px;
+}
+
+/* PAGE TITLE IN THE BANNER */
+.text {
+	top:          	   38%;
+	left:         	   34%;
+    color:        	   #f2f2f2;	/* light gray */    
+	width:        	   70%;
+    height:       	   20%;
+    z-index:      	   2;
+    padding:      	   8px 12px;
+    position:     	   absolute;
+	font-size:    	   48px;
+    text-align:   	   center;
+    font-family:  	  'Nunito';
+    font-weight:  	   bold;
+    background-color:  transparent;
+}
+
+/* WITCH IMAGE IN THE BANNER */
+.img_witch img {
+	top:              -8px;
+	left:              8%;
+	bottom:            0px;           
+	width:             30%;
+	height:	           87%;           
+	z-index:           3;
+	padding:           8px 12px;
+	opacity:           0.6;
+    position:          absolute;
+    overflow:          hidden;
+    text-align:        left;
+    min-height:        120px;
+	margin-top:        52px;   
+	background-color:  rgb(0,0,0, 0.6); /* black 60% transparent */
+}
+#mainPageImgWitch img {
+	left:             1.4%;
+	padding:          8px 12px;
+    opacity:          0.6;	
+}
+
+/* "HEALTHIEST OF CANDIES" BANNER */
+.banner {         
+    left:              56%;
+	float:             center;
+	color:             white;
+	border:            2px white solid;
+	z-index:           20;
+    padding:           14px 160px;
+    position:          absolute;
+	max-width:         530px;
+    transition:        0.4s;
+    margin-top:        230px;
+    max-height:        46px;
+	font-family:      'Nunito';
+    text-decoration:   none;
+    background-color:  transparent;
+}
+
+
+/*_________________________________________________________*/
+/* NAVIGATION BAR */
+.navbar {
+    top:               0; 
+    width:             98.2%;
+    float:             center;
+    color:             white;
+	z-index:          -21;
+	overflow:          hidden;
+    position:          auto;
+    margin-top:        23.6%;
+	text-align:        center;
+	min-height:        49px;
+    margin-left:       0%;
+	list-style-type:   none;
+    background-color:  #C60000; 	/* red pepper red */
+}
+
+/* LINKS INSIDE NAV BAR */
+.navbar li {
+    top: 			     12px;
+	color:               white;
+	border:              none;
+	display:             inline;
+	padding:             12px 16px;
+	position:            relative;
+	font-size:           23px;
+	max-width:           120px;
+	min-height:          80px;
+    text-align:          center;
+	transition:          all 0.2s;
+    font-weight:         bold;
+    text-decoration:     none;
+    background-color:    #e84c3a;	/* peach colour */
+	border-top-color:    transparent;
+	border-bottom-color: transparent;
+}
+
+.navbar span {
+    display:      inline-block;
+    position:     relative;
+    transition:   0.5s;
+	font-size:    16px;
+	font-style:   italic;
+    font-family: 'EB Garamond', serif;
+}
+
+nav .active {
+    color:            #d8412f;	/* tea red */
+	background-color: #f5ca99;	/* pale amber */
+}
+
+/* navigation button on hover, text color to red, background to amber */
+.navBtn:hover {
+    color:            #d8412f;	/* tea red */
+	background-color: #f5ca99;	/* pale amber */
+}
+
+.mid {
+	bottom:           0; 
+	width:            1100px; 
+	overflow-y:       auto; 
+	margin-top:       0%; 
+	overflow-x:       hidden; 	
+	margin-left:      7%; 
+	background-color: #f0f0f0; /* gray */
+}
+
+.bg_content {
+	display:          -webkit-box;
+    display:          -moz-box;
+    display:          -ms-flexbox;
+    display:          -webkit-flex;
+    display:           flex;
+	flex-flow:         row;
+	flex-basis: 	   auto;
+	justify-content:   flex-start;
+	-webkit-flex-flow: row;
+}
+
+/*_________________________________________________________*/
+/* CopyRight */
+footer {
+	color:       #778899;   /* light gray */
+	margin:      43px 38% 3px 36%;
+	text-align:  center; 
+	white-space: nowrap; 
+}
+/*_________________________________________________________*/
+/* Find hidden candy mini-game */
+#countPopup {
+	top:                76%;
+	right:             -17%;
+	color:              black;	
+	width:              20%;
+	height:             160px;
+	z-index:			99;
+	position:           fixed;
+	font-size:          14px;
+	background-size:    100%;
+	background-image:   url("../images/countBg.png");
+	background-repeat:  no-repeat;
+}
+
+#countPopup button {	
+	color:			   yellow;	
+	width:			   56px;
+	height:			   40px;
+	border: 		   solid black 3px;	
+	z-index:		   1;	
+	font-size:		   26px;	
+	transition:		   all 0.2s;
+	margin-top:		  -70%;
+	margin-left:	   72%;
+	font-weight:	   bold;
+	border-radius:	   10px;
+	text-decoration:   none;
+	background-color:  #e0220d;  /* bright red */
+}
+
+#countPopup button:hover {
+	color:			  red;
+	background-color: yellow;
+}
+
+.slide {
+	animation:         		   slide 4s;
+	animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 0.7);
+}
+
+#countPopup:hover {
+	animation:         		   slide 4s;
+	animation-timing-function: cubic-bezier(0.6, 0.1, 0.1, 0.7);
+}
+
+#countPopup p {
+	padding:      0 60px;
+	margin-top:  -10px;
+	font-family: 'Helvetica Neue';
+}
+
+#countText {
+	top:         48px;
+	left:        80px;
+	color:       #e0220d;    /* bright red */
+	position:    absolute;
+	font-size:   18px;
+	font-weight: bold;
+}
+
+@keyframes slide {
+	0% {
+		right: -17%;
+	}
+	10% {
+		right: -2%;
+	}
+	90% {
+		right: -2%;
+	}
+	100% {
+		right: -17%;
+	}
+}
+
+-webkit-@keyframes slide {
+	0% {
+		-webkit-right: -17%;
+	}
+	10% {
+		-webkit-right: -2%;
+	}
+	90% {
+		-webkit-right: -2%;
+	}
+	100% {
+		-webkit-right: -17%;
+	}
+}
+
+.hiddenItem {
+	animation: 		  rotate 1s infinite linear;	
+   -webkit-animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+	  transform: rotate(0deg);
+	  }
+  25% {
+	  transform: rotate(-12.5deg);
+	  }
+  50% {
+	  transform: rotate(0deg);
+      }
+  75% {
+	  transform: rotate(12.5deg);
+	  }
+  100%{
+	  transform: rotate(0deg);
+	  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+	  -webkit-transform: rotate(0deg);
+	  }
+  25% {
+	  -webkit-transform: rotate(-12.5deg);
+	  }
+  50% {
+	  -webkit-transform: rotate(0deg);
+      }
+  75% {
+	  -webkit-transform: rotate(12.5deg);
+	  }
+  100%{
+	  -webkit-transform: rotate(0deg);
+	  }
+}
+
+/*_____________________________________________________________________*/
+/* MOBILE VERSION */
+@media only screen and (max-width:500px) {
+	
+	html {
+		width:      530px;
+		margin:     0px;
+		overflow-y: auto;
+	}
+	
+	.toolbar {        
+		height:     0px;
+        min-height: 60px;
+    }
+	
+    #logo_s {
+		width:        70px;
+		height:       60px;
+		margin-top:  -64px;
+		margin-left:  44%;
+    }
+	
+	#home_text {
+		display: none;
+	}
+	#home_btn, #home_btn:hover {
+		width:            0px;
+		z-index:         -1;
+		margin-left:     -30px;
+		background-color: transparent;
+	}	
+	#home_btn img {
+		width:    56px;
+		height:   56px;
+		z-index: -1;
+	}	
+	
+	#websearchbtn {
+		width:        24px;
+		height:       26.3px;
+		margin-left: -3px;		
+	}
+	#contactBtn {
+		width:        24px;
+		height:       26.3px;
+		z-index:     -1;
+		margin-left: -73px;
+	}
+	
+	#closeSearch {
+		left:  390px;
+	}
+	
+	.searchWindow {
+		top: 60px;
+	}
+	
+	/*_______________________________________________*/
+	.bigBanner {
+		width:      600px;
+		height:     360px;
+        overflow:   hidden;
+        transition: 0.4s;
+		min-height: 360px;
+		margin-top: -24px;
+	}
+	
+	#mainPageTitle {
+		top:  	      40px;
+		margin-left: -207px; 
+	}
+	
+	#mainPageSideText {
+		font-size:    20px;
+		margin-top:   76px;
+		margin-left: -206px;
+	}
+	
+	.banner {         
+		float:             center;
+		margin:            30% 0% 0 -47%;
+		border:            2px white solid;
+		z-index:           20;
+		padding:           9px 100px;
+		position:          absolute;
+		max-width:         530px;
+		transition:        0.4s;
+		margin-top:        270px;
+		max-height:        46px;
+		font-family:      'Nunito';
+		text-decoration:   none;
+		background-color:  transparent;
+	}
+
+    .mid {
+        width:       600px;
+		margin-top:  10px;
+		margin-left: -48px;
+    }
+	
+	.navbar {
+		width:      100%;
+		height:     300px;
+		display:    auto;
+		z-index:    99;
+		margin-top: 280px;
+	}
+	
+	.navbar li {
+		top: 		 28px;
+		left:        -30px;
+		width:       500px;
+		border:      none;
+		display:     block;
+		padding:     12px 217px;
+		font-size:   23px;
+		text-align:  center;
+		min-height:  30px;
+		white-space: nowrap;
+	}
+
+    .img_witch {
+        display: none;
+    }
+	
+	/* CopyRight */
+	footer {
+		max-width:    30%;
+		white-space:  normal; 
+		margin-top:  -20px;
+		margin-left:  4%;
+	}
+
+    .text {
+		top:         140px;		
+		font-size:   40px;   
+		margin-left: -21%;
+    }
+	
+	.List {
+		flex: 4;
+	}
+	
+	.Tips article {		
+		width: 310px;
+		margin-left: -30px;
+	}
+	
+	#countPopup {		
+		right:            -40%;
+		width:             230px;
+		height:            400px;
+		background-size:   100%;
+	}
+	
+	#countPopup p {
+		width:             120px;
+		height:            200px;
+		background-size:   100%;
+	}
+
+	#countText {
+		top:         40px;
+		font-size:   16px;
+	}
+
+	@keyframes slide {
+		0% {
+			right: -37%;
+		}
+		10% {
+			right: -3%;
+		}
+		90% {
+			right: -3%;
+		}
+		100% {
+			right: -37%;
+		}
+	}
+
+	-webkit-@keyframes slide {
+		0% {
+			-webkit-right: -36%;
+		}
+		10% {
+			-webkit-right: -3%;
+		}
+		90% {
+			-webkit-right: -3%;
+		}
+		100% {
+			-webkit-right: -36%;
+		}
+	}
+}
+
+
+
+
+
+

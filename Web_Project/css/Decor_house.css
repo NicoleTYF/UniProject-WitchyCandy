@@ -1,0 +1,271 @@
+/* PAGE CONTENT */
+.mid {
+	width:            1200px;
+	overflow:		  hidden;
+	min-height:       500px; 
+	margin-top:       7%;
+	margin-left:      3%; 
+	margin-bottom:    0; 
+	background-color: #f0f0f0;
+	
+	display:          flex;
+	display:         -webkit-box;
+    display:         -moz-box;
+    display:         -ms-flexbox;
+    display:         -webkit-flex;
+	flex-flow:        row;
+	flex-basis: 	  auto;
+	justify-content:  flex-start;
+   -ms-flex-flow:     row;
+   -webkit-flex-flow: row;
+}
+/*__________________________________________________________________________*/
+/*DECORATION LEFT BOX*/
+.decorate {
+	order:            2;
+	width:            75%;
+	margin:           0;
+	display:          flex;
+	display:         -webkit-box;
+    display:         -moz-box;
+    display:         -ms-flexbox;
+    display:         -webkit-flex;
+	flex-flow:        column;
+	flex-basis: 	  auto;
+	justify-content:  flex-start;
+   -ms-flex-flow:     column;
+   -webkit-flex-flow: column;
+	background-color: white;
+}
+
+.decorate footer {	
+	padding:		  8px 49%;	
+	transition:       all 0.4s;
+	margin-top:       30px;
+	margin-left:      0px;
+	margin-bottom:    0px;
+	background-color: gray;
+}
+.decorate button {	
+	color:             white;
+	border:            none;
+	padding:		   16px 30px;
+	font-size:         30px;
+	margin-top:       -2px;
+	margin-left:      -90px;
+	margin-bottom:     0px;
+	text-decoration:   none;
+	background-color:  transparent;
+}
+
+.decorate footer:hover, 
+.decorate footer:hover .decorate button {	
+	background-color: #8fe637;
+}
+/*_____________________________________________________________________*/
+/*TOOL RIGHT BOX*/
+.toolBox {
+	order:            1;
+	width:            20%;
+	margin:           0;
+	z-index:          2;
+	display:          flex;
+	display:         -webkit-box;
+    display:         -moz-box;
+    display:         -ms-flexbox;
+    display:         -webkit-flex;
+	padding:          30px;
+	opacity:          1;
+	flex-flow:        column;
+	flex-basis: 	  auto;
+	justify-content:  flex-start;
+   -ms-flex-flow:     column;
+   -webkit-flex-flow: column;
+	background-image: url(../images/slideShowSample2_bg.png);
+}
+
+#previous, #next {
+	width:    120px;
+	height:   60px;
+	z-index:  3;
+	display:  auto;
+	padding:  0px 60px;
+	position: absolute;
+}
+
+#previous {
+	display: none;
+}
+
+#next {
+	margin-top: 400px;
+}
+
+.collection {
+	width:            117%;
+	display:          flex;
+	display:         -webkit-box;
+    display:         -moz-box;
+    display:         -ms-flexbox;
+    display:         -webkit-flex;
+	padding:          0px;
+	flex-basis: 	  auto;
+	margin-top:       60px;
+	margin-left:     -14px;
+	justify-content:  space-around;
+   -ms-flex-flow:     row wrap;
+   -webkit-flex-flow: row wrap;
+}
+
+#c1 {
+	z-index: 4;
+}
+
+#c2 {
+	width:            118%;
+	z-index:          2;
+	margin-top:      -322px;
+	margin-left:     -16px;
+}
+
+.collection img {
+	width:        90px;
+	height:       90px;
+	padding:      10px;
+	margin-top:   0px;
+	margin-left: -8px;
+	
+}
+
+#toolBoxBg {	
+	width:     		   121%;
+	height:    		   320px;
+	z-index:   		   3;
+	margin-top:       -328px;
+	margin-left:      -28px;
+	background-image:  url("../images/slideShowSample2_bg.png");
+}
+
+#decoImg_house {
+	width:       340px; 
+	height:      300px; 
+	margin-top:  30px; 
+	margin-left: 270px; 
+}
+
+#decoImg_hansel {
+	margin-top:  -60px; 
+	margin-left:  670px; 
+}
+
+#decoImg_gretel {
+	margin-top:  -60px; 
+	margin-left:  630px; 
+}
+
+#decoImg_witch {
+	position:     fixed;
+	margin-top:   60px; 
+	margin-left:  140px; 
+}
+
+#title {
+	color:        #c70026;
+	font-size:    30px;
+	text-align:   center;
+	padding-top:  30px;
+	font-family: 'Nunito';
+	margin-left:  380px;
+}
+
+/*_____________________________________________________________________*/
+/* FOR MOBILE DEBVICE (500px) */
+@media only screen and (max-width:500px) {
+
+	/* PAGE CONTENT */
+	.mid {
+		width:       508px;
+		margin-top:  2.17%;
+		margin-left: 0px;
+	}
+
+	.decorate {
+		width:            68%;
+		margin:           0;
+	}
+	
+	.decorate footer {	
+		padding:		  8px 49%;	
+		transition:       all 0.4s;
+		margin-top:       30px;
+		margin-left:      0px;
+		margin-bottom:    0px;
+		background-color: gray;
+	}
+	.decorate button {	
+		color:             white;
+		border:            none;
+		padding:		   16px 30px;
+		font-size:         30px;
+		margin-top:       -2px;
+		margin-left:      -90px;
+		margin-bottom:     0px;
+		text-decoration:   none;
+		background-color:  transparent;
+	}
+
+	#previous, #next {
+		padding:     0px;
+		margin-top:  40px;
+		margin-left:  -14px;
+	}
+
+	#next {
+		margin-top: 380px;
+	}
+
+	.collection {
+		width:            167%;
+		margin-top:       120px;
+		margin-left:     -28px;
+	}
+
+	#c2 {
+		width:        164%;
+		margin-top:  -232px;
+		margin-left: -28px;
+	}
+
+	.collection img {
+		width:  60px;
+		height: 60px;
+	}
+
+	#toolBoxBg {	
+		width:     	  149%;
+		height:       240px;
+		margin-top:  -248px;
+		margin-left: -24px;
+	}
+
+	#decoImg_house {
+		width:       320px; 
+		height:      280px; 
+		margin-left: 10px; 
+	}
+
+	#title {
+		padding-top:  70px;
+		margin-left:  0px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

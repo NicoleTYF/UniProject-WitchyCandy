@@ -1,0 +1,563 @@
+﻿
+.bigBanner {
+	left:  -42px;
+	width:  100%;
+}
+
+.navbar {
+    width:        96.97%;
+    margin-left: -2px;
+}
+
+.navbar li {
+	left: 20px;
+}
+
+/* PAGE CONTENT */
+.mid {
+	width:            1100px; 
+	margin:           0 auto;  	
+	bottom:           0; 
+	min-height:       0px; 
+	overflow-y:       auto; 
+	margin-top:       0%; 
+	overflow-x:       hidden; 	
+	background-color: #f0f0f0; /* gray */
+}
+
+/* _______________________________________________________________________________________ */
+/* CELL IMAGE ON THE LEFT */
+.itemImg {
+    height:    100%;
+    max-width: 40%;
+}
+
+/* CELL TEXT ON THE RIGHT */
+.itemText {
+    width:       50%;
+	position:    relative;	
+	font-size:   23px;
+	margin-top:  -200px;    
+    text-align:  center;
+    margin-left: 38%;
+	font-family: 'Open Sans Condensed', serif;
+}
+
+.likeBtn {
+	width:            100%;
+	height:           102%;
+	border:           none;
+	margin-top:       -1.6px;
+	transition:       all 0.2s;
+	text-decoration:  none;
+	background-image: url("../images/cellSideBar/fav_empty.png");
+}
+
+.likeBtn:hover {
+	background-image: url("../images/cellSideBar/fav_hover.png");
+}
+
+.likeBtn.liked {
+	background-image: url("../images/cellSideBar/fav_faved.png");
+}
+
+.readMore {
+	color:           #eb1d2a;
+	right:           24px;
+	bottom:          -60%; 
+	padding:         2px;
+	position:        absolute;	
+	font-size:       20px;
+	transition:      all 0.4s;
+	text-align:      right;
+	text-decoration: underline;
+}
+
+#hiddenRB {
+	top:        130px;
+	height:     28px;
+	margin-top: 0px;
+}
+
+.readMore:hover, .readMore:visited {
+	color:            white;
+	background-color: rgba(235, 49, 62, 80);
+}
+
+.itemName {
+    font-family: 'Helvetica Neue';
+	line-height: 0.3;
+}
+
+.itemSideBar {
+    float:            right;
+	width:            7%;
+	height:           100%;
+    margin-top:       0%;
+	transition:       0.4s;
+	margin-right:     0%;
+	background-color: transparent;
+}
+
+/* CELL (DIY PAGE ONLY) */
+.DIY.cell {
+	height:	290px;
+}
+
+.DIY .itemText { 
+	order:        2;
+	float:		  center;
+	text-align:   left;
+	margin-left:  3%;
+	margin-right: 20%;
+}
+
+.DIY header {
+	width:			  800px;
+	font-size:	      100%;
+	text-align:		  center;
+	margin-top:       197px;
+	margin-left:     -30px;
+	line-height:      1;
+	white-space:      nowrap;
+	background-color: rgba(230, 230, 230, 0.3);
+}
+
+/* CELL TEXT DESCRIPTION ON THE RIGHT */
+.DIY summary {
+	width:		  470px;
+	font-size:	  20px;
+	margin-top:  -16px;
+	margin-left:  80px;
+	line-height:  1.4;
+}
+
+.DIY .itemImg {
+	order:       1;
+	height:      50%;
+	z-index:	 3;
+	min-width:   100%;
+	margin-top: -10px;
+}
+
+/* CELL LIKE BUTTON ON THE RIGHT */
+.DIY .itemSideBar button {
+	height:               100px;
+	margin-top:           48px;
+	background-position:  0 420px;
+}
+
+/* CELL READ MORE BUTTON ON THE RIGHT */
+.DIY .readMore { 
+	top:    112px;
+	right: -224px;
+}
+
+/* ____________________________________________________________________ */
+/* POPUP BOX */
+.popUpBox {
+	top:              0;	
+	left:             0;		
+	width:            100%; 
+	height:           100%; 
+	z-index:          99; 
+	display:          none; 	
+	overflow:         hidden; 
+	position:         fixed; 
+	padding-top:      100px; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4);
+}
+
+/* The Close Button */
+.closeBtn {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	margin-right: 170px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes dropFromTop {
+	from {
+		top:-300px; 
+		opacity:0
+	} to {
+		top:0; 
+		opacity:1
+	}
+}
+
+@keyframes dropFromTop {
+	from {
+		top:-300px; 
+		opacity:0
+	} to {
+		top:0; 
+		opacity:1
+	}
+}
+
+.popUpImg {
+	order:       1;
+	width:       340px;
+	z-index:     -1;
+	min-height:  400px;
+}
+
+.popUpBox section {
+	width:                      70%;
+	height:                     400px;
+	margin:                     auto;
+	border:                     1px solid #888;
+	padding:                    0;
+	position:                   relative;	
+	overflow:                   hidden;
+	box-shadow:                 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	transition:                 all 0.4s;
+	font-family:                "Helvetica Neue";
+	border-radius:              20px;	
+	animation-name:             dropFromTop;
+	animation-duration:         0.4s;
+	background-color:           #fefefe;
+	-webkit-animation-name:     dropFromTop;
+	-webkit-animation-duration: 0.4s;
+}
+
+.popUpBox article {
+	order:             2;
+	display:          -webkit-box;
+    display:          -moz-box;
+    display:          -ms-flexbox;
+    display:          -webkit-flex;
+    display:           flex;
+	overflow:          hidden;
+	flex-flow:         row;
+	flex-basis: 	   auto;
+	transition:        all 0.4s;
+	justify-content:   flex-start;
+   -webkit-flex-flow:  row;	
+}
+
+.popUpContent {
+	order:             2;
+	display:          -webkit-box;
+    display:          -moz-box;
+    display:          -ms-flexbox;
+    display:          -webkit-flex;
+    display:           flex;
+	overflow:          hidden;
+	flex-flow:         column;
+	flex-basis: 	   auto;
+	justify-content:   flex-start;
+	-webkit-flex-flow: column;	
+}
+
+.popUpBox header {
+	order:            1;
+	color:            white;
+	width:            90%;
+	height:           60px;  
+	padding:          2px 120px;
+	text-align:       center;
+	background-color: #85020a;
+}
+
+.popUpText {
+	order:       2;
+	padding:     0px 10px;
+	flex-grow:   20;
+	overflow-x:  hidden;
+	overflow-y:  auto;
+	max-height:  300px;
+	flex-shrink: 0;
+}
+
+.popUpBox h4 {	
+	color:     #C60000;
+	height:    0px;
+	padding:   10px;
+	font-size: 16px;
+	
+}
+
+.popUpBox li {
+	left:      120px;
+	color:     black;
+	padding:   0px 30px;
+	font-size: 16px;
+}
+
+.DIY .popUpBox {
+	top:              0;	
+	left:             0;		
+	width:            100%; 
+	height:           100%; 
+	z-index:          99; 
+	display:          none; 	
+	overflow:         hidden; 
+	position:         fixed; 
+	padding-top:      0px; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4);
+}
+
+.DIY .popUpFlexBox {
+	height:      500px;
+	margin-top: -50px;
+}
+
+.DIY .popUpImg {
+	width:       100%;
+	height:		 140px;
+	z-index:    -1;
+	min-width:   100%;	
+	min-height:  0px;
+	max-height:  40%;
+}
+
+.DIY article {
+	flex-flow:        column;
+   -webkit-flex-flow: column;	
+	
+}
+
+.DIY .popUpContent {
+	order:             2;
+	margin-top:       -203px;	
+	flex-flow:         column;
+	-webkit-flex-flow: column;	
+}
+
+.DIY h3 {
+	order:        3;
+	height:       40px;  
+	padding:      2px 0px;
+	font-size:    30px;
+	text-align:   center;
+	margin-top:   10px;
+	margin-left: -90px;
+}
+
+.DIY .popUpText {
+	height:     270px;
+	padding:    0px 40px;
+	overflow-y: auto;
+}
+
+.DIY .closeBtn {
+	color:        black;
+	font-size:    40px;
+	margin-top:  -130px;
+	margin-right: 40px;
+}
+
+/*_____________________________________________________________________*/
+@media only screen and (max-width:500px) {
+	
+	.bigBanner {
+		width: 530px;
+	}
+	
+	.text {
+		width:  400px;
+		margin: 0 -20%;
+	}
+	
+	.navbar {
+		height: 328px;
+	}	
+	
+	.navbar li {
+		top:   54px;
+		left: -42px;
+	}
+
+    .mid {
+        width:        630px;
+		margin-top:   10px;
+		margin-left: -70px;
+    }
+
+	.cell {
+		width:      500px;
+		margin:     20px 0 20px 15%;
+		font-size:  7px;
+		max-width:  110%;
+		max-height: 180px;
+	}
+	
+	.itemText {
+		top:          40px;    
+		left:         6%;
+		text-align:   center;
+		font-family: 'Open Sans Condensed', serif;
+	}
+	
+	.itemName {
+		font-size:  16px;
+	}
+	
+	.itemText summary {
+		font-size:  18px;
+	}
+	
+	.itemSideBar {
+		min-width:        12%;
+		height:           60px;
+		top:             -40px;
+		background-color: transparent;
+	}
+	
+	.likeBtn {
+		width:               100%;
+		margin-top:          0px;
+		max-height:          48px;
+		margin-left:         0px;
+		background-position: center;
+	}
+	
+	.readMore {
+		padding:         6px;
+		position:        absolute;
+		font-size:       18px;		
+		margin-right:    -32px;
+		margin-bottom:   0px; 
+	}
+	
+	#hiddenRB {
+		top:             18px;
+		right:          -8px;
+		padding:         6px;
+		position:		 relative;
+	}
+	
+	.popUpBox li {
+		width: 90%;
+	}
+	
+	.popUpImg {
+		display: none;
+	}
+	
+	.popUpContent h2{
+		text-align:   center;
+		white-space:  nowrap;
+		margin-left: -60px;
+	}
+	
+	.DIY .itemText { 
+		text-align:   left;
+		margin-left:  3%;
+		margin-right: 40%;
+	}
+
+	.DIY h2 {
+		width:			  700px;
+		font-size:	      80%;
+		text-align:		  center;
+		margin-top:      -32.6%;
+		margin-left:     -160px;
+		line-height:      1;
+		white-space:      nowrap;
+	}
+	
+	.DIY header {
+		background-color: transparent;
+	}
+
+	.DIY summary {
+		width:		  270px;
+		font-size:	  64%;
+		margin-top:  -12px;
+		margin-left:  60px;
+		line-height:  1.4;
+	}
+
+	.DIY .itemImg {
+		order:       1;
+		height:      50%;
+		z-index:	 3;
+		min-width:   100%;
+		margin-top: -10px;
+	}
+
+	.DIY .itemSideBar {
+		z-index:    1;
+		min-height: 120px;
+		margin-top: -20px;
+	}
+	
+	.DIY .itemSideBar button {
+		min-height:           100px;
+		background-position:  0 400px;
+	}
+
+	.DIY .readMore { 
+		top:            62px;
+		right:          220px;
+		font-size:      100%;		
+		padding-bottom: 0px;
+	}
+
+	.DIY article {
+		height:            600px;
+		flex-flow:         column;
+	   -webkit-flex-flow:  column;	
+	}
+
+	.DIY h3 {
+		margin-top:   10px;
+		order:        3;
+		color:		  red;
+		height:       40px;  
+		padding:      2px 10px;
+		font-size:    20px; 
+		text-align:   center;
+		margin-top:   10px;
+		margin-left: -90px;
+	}
+
+	.DIY .popUpText {
+		height: 600%;
+	}
+
+	.DIY .closeBtn {
+		color:        black;
+		font-size:    40px;
+		margin-top:   30px;
+		margin-right: 90px;
+	}
+
+}
+
+.cell {
+    width:            70%;
+    float:            center;
+    height:           240px;
+    margin:           20px 0 20px 15%;
+    z-index:          30;
+	overflow:         hidden;
+    border-radius:    5px;
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+

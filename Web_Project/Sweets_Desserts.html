@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en" onload="setup()">
+
+<head>
+
+    <title>Sweets & Desserts</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/CellPages.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="icon" type="image/png" href="images/logo.png"/>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Noto+Sans|Nunito|Helvetica+Neue|Open+Sans+Condensed:300" rel="stylesheet">
+
+	<!-- Week 9 Incorporating jQuery/JS -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Tool Bar -->
+    <div class="toolbar" id="toolBar">
+
+        <!-- HOME button on the top-left -->
+		<div id= "home_btn" onclick="window.location.href='index.html'" title="Back to home">
+			<img src="images/logo.png" id="logo" height="64" width="68" 
+				alt= "image of a ginger bread house" /> 
+			<span id= "home_text">HOME</span>
+		</div>
+		
+		<!-- LOGO in the middle -->
+		<img src="images/logo_text.png" id="logo_s" height="64" width="74" 
+		title="logo" alt="logo image"/> 
+
+		<!-- Search and Filter button -->
+		<div class = "toolBarBtns" >
+			<input id="websearchField" type="text" placeholder="Search in this page..." 
+				title="Type in tip content/title" onkeyup="wordSearch(false)"/>
+			
+			<div class="Contact" >
+				<input id="contactBtn" type="image" src="images/filter_white.png" 
+					title="Contact us" alt="contact button"/>
+				<div id="contactWindow">
+				  <p><b>We are looking for feedbacks! &#128150;&#128150;&#128150;</b></p>
+					  &#128231; E-mail: <a href="mailto:witchyCandy@gmail.com">witchyCandy@gmail.com</a><br/>
+					  &#128222; Phone:  234 234 5629 
+				  <p/>
+				  <a href="https://www.facebook.com/public/witchycandy">
+					<img src="images/fb.png" width="30" height="30" title="witchyCandyFB"/></a>  
+				  <a href="https://www.instagram.com/explore/tags/witchycandy/">
+					<img src="images/ins.png" width="30" height="30" title="@witchyCandy"/></a>
+				</div>
+			</div>
+			
+            <input id="websearchbtn" type="image" src="images/search_white.png" 
+				 onclick = "openSearch()" title="search in this page" alt="search"/>
+		</div> 
+    </div>
+
+	<!-- Search Window -->
+	<div class="searchWindow" id="searchWindow">
+	  <div class="searchContent">
+		<div class="container" >
+		  <form>	
+			<button id= "closeSearch" onclick="closeSearch()">&times;</button>
+			<section>
+				<header>RESULT</header>
+				<span id="noResult"> Sorry I cannot find anything you searched, <br/>but I can find hope in you.<br/> (・∀&nbsp;- )~</span>
+				<ul id="searchList">
+					<li id= "tipMark" onclick= "scrollToTips('dessert', 1, 160), closeNav()">Dark Chocolate
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('dessert', 2, 170), closeNav()">Greek Yogurt
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('dessert', 3, 160), closeNav()">Honeycomb
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('dessert', 4, 160), closeNav()">Salmon
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+				</ul>
+			</section>
+		  </form>
+		</div>
+	  </div>
+	</div>
+
+<!-- __________________________________________________________________________________________ -->
+		
+	<!-- Banner -->
+	<section class="bigBanner"> 
+		<figure class="fixBg">
+			<div class="text"><p>SWEETS & DESSERTS </p></div>
+			<figure class="img_witch" title="Image of the witch.">
+				<img src="images/CH_witch.png" id="witch" alt= "Image of the witch."/> 
+			</figure>
+		</figure>
+	</section>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar" id="navbar"> 
+	
+		<li class="navBtn" id="navBtn1" onclick = "window.location.href='About_us.html';">
+		<span>	&nbsp;&nbsp;About Us&nbsp;&nbsp;              </span></li>
+						
+		<li class="navBtn" id="navBtn2" onclick = "window.location.href='Health_tips.html';">
+		<span>	&nbsp;&nbsp;Health Tips&nbsp;&nbsp;           </span></li>
+						
+		<li class="navBtn active" id="navBtn3" onclick = "window.location.href='Sweets_Desserts.html';">
+		<span>	&nbsp;&nbsp;Sweeets & Desserts &nbsp;&nbsp;   </span></li>
+		
+		<li class="navBtn" id="navBtn4" onclick = "window.location.href='DIY_ideas.html';">
+		<span>	&nbsp;&nbsp;&nbsp;DIY Ideas&nbsp;&nbsp;&nbsp; </span></li>
+						
+		<li class="navBtn" id="navBtn5" onclick = "window.location.href='Decor_house.html';">
+		<span>	&nbsp;&nbsp;Decorate Your House&nbsp;&nbsp;   </span></li>
+						
+	</nav>
+
+	<!-- Content(the gray retangle) -->
+	<div class="mid" id="mid">
+		<div class="bg">
+			
+			<!-- Cell 1 -->
+			<div class="cell" id="cell1">
+				<img class="itemImg" src="images/dChocolate.png" alt="image of Dark chocolate" title="Dark chocolate"/>
+				<aside class= "itemSideBar"> 
+					<button class = "likeBtn" title="like button"/>
+				</aside>
+				<section class="itemText">
+					<header class= "itemName"><h2><a>
+					<img id="chocolate" class="candy hiddenItem" src = "images/choco_t.png" height = "34px" width = "34px"
+						onclick="openBox(1), updateCandyList(4)" /> &nbsp;Dark Chocolate </a></h2></header>
+					<summary>It can improve your mood, and helps you think clearly!
+					<a class= "readMore" id="hiddenRB" onclick="openBox(1)"><b>         Read more... </b></a></summary>							 
+				</section>
+			</div>
+			
+			<!-- Cell 2 -->
+			<div class="cell" id="cell2">
+				<img class="itemImg" src="images/yogurt_full.png" alt="image of Greek Yougurt" title="Greek Yougurt"/>
+				<aside  class= "itemSideBar"> 
+					<button class = "likeBtn" title="like button"/>
+				</aside>
+				<section class="itemText">
+					<header class="itemName"><h2><a>&#x1F368; &nbsp;Greek Yogurt </a></h2></header>
+					<summary>Dessert for losing weight, helps combating illness effectively!</summary>
+					<a class= "readMore" onclick="openBox(2)"><b>         Read more... </b></a>
+				</section>
+			</div>
+		
+			<!-- Cell 3 -->
+			<div class="cell" id="cell3">
+				<img class="itemImg" src="images/honeycomb.png" alt="image of Honeycomb" title="Honeycomb"/>
+				<aside  class= "itemSideBar"> 
+					<button class = "likeBtn" title="like button"/>
+				</aside>
+				<section class="itemText">
+					<header class= "itemName"><h2><a>&#x1f36f;&nbsp;Honeycomb </a></h2></header>
+					<summary>Raw honey with chewy wax cells, is a great substitute of artificial sugar.</summary>							 
+					<a class= "readMore" onclick="openBox(3)"><b>         Read more... </b></a>
+				</section>
+			</div>
+
+			<!-- Cell 4 -->
+			<div class="cell" id="cell4">
+				<img class="itemImg" src="images/salmon.png" alt="image of Salmon" title="Salmon"/>
+				<aside  class= "itemSideBar"> 
+					<button class = "likeBtn" title="like button"/>
+				</aside>
+				<section class="itemText">
+					<header class="itemName"><h2><a>&#x1F41F;&nbsp;Salmon </a></h2></header>
+					<summary>Protecting heart and brain health, <br/>prevent muscle loss</summary>
+					<a class= "readMore" onclick="openBox(4)"><b>         Read more... </b></a>
+				</section>
+			</div>
+		</div>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+	</div>
+	
+	<!-- Popup content -->
+	<div id="popUp1" class="popUpBox">
+	  <section>
+		<article>
+			<aside><img class="popUpImg" src="images/dChocolate.png" 
+				alt="image of Dark chocolate" title="Dark chocolate"/>
+			</aside>
+			<div class="popUpContent">		
+				<header>
+				  <span class="closeBtn" onclick="closeBox(1)">&times;</span>
+				  <h2>Dark Chocolate</h2>
+				</header>
+				<content class="popUpText">
+				  <h4>BENEFITS</h4>
+						<li>&#x1f44d;&#x1f3fb;&nbsp;Plentiful Antioxidants to Lower Blood Pressure</li>
+						<li>&#x1f44d;&#x1f3fb;&nbsp;May Improve Blood Flow</li>
+						<li>&#129504;&nbsp;Could Improve Brain Function</li>
+
+				  <h4>FUN FACTS</h4>
+						<li>&#128197;&nbsp;February 1st is National Dark Chocolate Day.</li><br/>
+						<li>&#x2764;&#xFE0F;&nbsp;Studies found that a single 1.6-ounce bar of<br/> 
+							dark chocolate every day is good for you.</li><br/>
+						<li>&#128270;&nbsp;It was first seen in bar form in about 1910.</li><br/>
+						<li><img src = "images/temp.png" height = "20px" width = "20px" />&nbsp;
+							Cocoa butter’s melting point is just below human body temperature.</li><br/>
+
+				  <h4>RELATED RECIPES</h4>
+						<li>Dark Chcoclate Mousse</li>
+				</content>
+			</div>		
+		</article>
+	  </section>
+	</div>
+	
+	<div id="popUp2" class="popUpBox">
+	  <section>
+		<article>
+			<aside><img class="popUpImg" src="images/yogurt_full.png" 
+				alt="image of Greek Yogurt" title="Greek Yogurt"/>
+			</aside>
+			<div class="popUpContent">		
+				<header>
+				  <span class="closeBtn" onclick="closeBox(2)">&times;</span>
+				  <h2>Greek Yogurt</h2>
+				</header>
+				<content class="popUpText">
+				  <h4>BENEFITS</h4>
+						<li>&#x1F6E1;&#xFE0F;&nbsp;Helps combating illness effectively.</li>
+						<li>&#x1f9e0;&nbsp;Faciclitate brain function.</li>
+						<li>&#x1f3cb;&nbsp;Helps ro keeping Fit</li>
+
+				  <h4>FUN FACTS</h4>
+						<li>&#128197;&nbsp;November 9th is National Greek Yogurt Day.</li><br/>
+						<li>&#x1F404;&nbsp;Because cow’s milk is commonly available<br/> 
+							worldwide, it is the milk most commonly used to make yogurt.</li><br/>
+						<li>&#128270;&nbsp;Once yogurt makers strain the yogurt to let the liquid whey run off.
+							What’s left behind is Greek yogurt. </li><br/>
+						<li>&#x1f52c;&nbsp;The bacteria used to make yogurt are known as yogurt cultures.
+							It produces the tart texture of greek yogurt.</li><br/>
+
+				  <h4>RELATED RECIPES</h4>
+						<li>Greek Yougurt Key Lime Cheesecake</li>
+				</content>
+			</div>		
+		</article>
+	  </section>
+	</div>
+
+	<div id="popUp3" class="popUpBox">
+	  <section>
+		<article>
+			<aside><img class="popUpImg" src="images/honeycomb.png" 
+				alt="image of Honeycomb" title="Honeycomb"/>
+			</aside>
+			<div class="popUpContent">		
+				<header>
+				  <span class="closeBtn" onclick="closeBox(3)">&times;</span>
+				  <h2>Honeycomb</h2>
+				</header>
+				<content class="popUpText">
+				  <h4>BENEFITS</h4>
+						<li>&#x1F6E1;&#xFE0F;&nbsp;Protect Against Infections</li>
+						<li>&#129319;&nbsp;Reduce Coughing</li>
+						<li>&#x1F367;&nbsp;The taste is less likely to be ruined by artificial sweeteners</li>
+
+				  <h4>FUN FACTS</h4>
+						<li>&#x1f41d;&nbsp;Honeycombs are used by bees to create and store honey.</li><br/>
+						<li>&#x1f60b;&nbsp;Brownish colour honeycombs tends to have<br/> 
+							stronger taste of honey, whereas the white ones has lighter taste.</li><br/>
+						<li>&#x2696;&#xFE0F;&nbsp;100g of honeycomb can support weight of up to 4kg. </li><br/>
+						<li>&#11043;&nbsp;The hexagonal shape of the combs takes up less effort for
+							the bees to buils a cell compare to other shapes.</li><br/>
+
+				  <h4>RELATED RECIPES</h4>
+						<li>Honey Cashew Morning Buns</li>
+				</content>
+			</div>		
+		</article>
+	  </section>
+	</div>
+	
+	<div id="popUp4" class="popUpBox">
+	  <section>
+		<article>
+			<aside><img class="popUpImg" src="images/salmon.png" 
+				alt="image of Salmon" title="Salmon"/>
+			</aside>
+			<div class="popUpContent">		
+				<header>
+				  <span class="closeBtn" onclick="closeBox(4)">&times;</span>
+				  <h2>Salmon</h2>
+				</header>
+				<content class="popUpText">
+				  <h4>BENEFITS</h4>
+						<li>&#x1f44d;&#x1f3fb;&nbsp;Control blood pressure</li>
+						<li>&#x1F4AA;&#x1f3fb;&nbsp;Prevent muscle loss</li>
+						<li>&#x1f9e0;&nbsp;Protecting heart and brain health</li>
+						<li>&#x1f3cb;&nbsp;Help you control your weight </li><br/>
+						
+				  <h4>FUN FACTS</h4>
+						<li>&#x1F41F;&nbsp;Salmon are named after their comes from the Latin word salmo or salire, 
+							which means “to leap”. </li><br/>
+						<li>&#x1F3DD;&#xFE0F;&nbsp;Salmon spend between 1 and 7 years out in the ocean, depending on the species. </li><br/>
+						<li>&#x1F41F;&nbsp;Salmon change colour through different stages of life, from blue to red. </li><br/>
+						<li>&#x1F443;&#x1f3fb;&nbsp;Atlantic salmon can smell one drop of scent in an area 
+							the equivalent of ten Olympic size pools! </li><br/>
+
+				  <h4>RELATED RECIPES</h4>
+						<li>Smoked Salmon and Cream Cheese Muffin</li>
+				</content>
+			</div>		
+		</article>
+	  </section>
+	</div>
+	
+	<!-- Floating count box -->
+	<div id="countPopup" alt="Hidden candies game popupbox" title="Find all the hidden candies!"> 
+		<button id="resetBtn" title="Play again" onclick="localStorage.clear(); 
+			location.reload();">&#8635;</button>
+		<p>Find all the witch's candies within the website!</p>
+		<p id="countText"><span id="count">0</span> / 6
+		<img class="hiddenItem" src= "images/candy.png" alt="image of a candy"/> collected!</p>
+	</div>
+	
+	<!-- Copyright -->
+	<footer>
+		<span>Copyright &#xa9; 2019 Witchy Candy. All rights reserved.</span>
+	</footer>
+			
+</body>
+</html>
+

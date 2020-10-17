@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" onload="setup()">
+
+<head>
+
+    <title>About Us</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css">    
+	<link href="css/ArticlesPages.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="icon" type="image/png" href="images/logo.png"/>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Noto+Sans|Nunito|
+		Helvetica+Neue|Open+Sans+Condensed:300" rel="stylesheet">
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+</head>
+
+<body id="body">
+
+	<!-- Tool Bar -->
+    <div class="toolbar" id="toolBar">
+
+        <!-- HOME button on the top-left -->
+		<div id= "home_btn" onclick="window.location.href='index.html'" title="Back to home">
+			<img src="images/logo.png" id="logo" height="64" width="68" 
+				alt= "image of a ginger bread house" /> 
+			<span id= "home_text">HOME</span>
+		</div>
+
+		<!-- LOGO in the middle -->
+		<img src="images/logo_text.png" id="logo_s" height="64" width="74" 
+		title="logo" alt="logo image"/> 
+		
+		<!-- Search and Filter button -->
+		<div class = "toolBarBtns" >
+			<input id="websearchField" type="text" placeholder="Search in this page..." 
+				title="Type in tip content/title" onkeyup="wordSearch(true)"/>
+			
+			<div class="Contact" >
+				<input id="contactBtn" type="image" src="images/filter_white.png" 
+					title="Contact us" alt="contact button"/>
+				<div id="contactWindow">
+				  <p><b>We are looking for feedbacks! &#128150;&#128150;&#128150;</b></p>
+					  &#128231; E-mail: <a href="mailto:witchyCandy@gmail.com">witchyCandy@gmail.com</a><br/>
+					  &#128222; Phone:  234 234 5629 
+				  <p/>
+				  <a href="https://www.facebook.com/public/witchycandy">
+					<img src="images/fb.png" width="30" height="30" title="witchyCandyFB"/></a>  
+				  <a href="https://www.instagram.com/explore/tags/witchycandy/">
+					<img src="images/ins.png" width="30" height="30" title="@witchyCandy"/></a>
+				</div>
+			</div>
+			
+            <input id="websearchbtn" type="image" src="images/search_white.png" 
+				 onclick = "openSearch()" title="search in this page" alt="search"/>
+		</div> 
+    </div>
+
+
+	
+	<!-- Search Window -->
+	<div class="searchWindow" id="searchWindow">
+
+	  <div class="searchContent">
+		<form class="container" >	
+		  <button id= "closeSearch" onclick="closeSearch()">&times;</button>
+			<section>
+				<header>RESULT</header>
+				<span id="noResult"> Sorry I cannot find anything you searched, <br/>but I can find hope in you.<br/> (・∀&nbsp;- )~</span>
+				<ul id="searchList">
+					<li id= "tipMark" onclick= "scrollToTips('tip', 1, 160), closeNav()">What is WITCH CANDY?
+						&emsp;&emsp;&emsp;&emsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 2, 170), closeNav()">Backstory
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 3, 160), closeNav()">Why Healthy Desserts?
+						&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 4, 160), closeNav()">References
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+				</ul>
+
+			</section>
+			
+		</form>
+	  </div>
+	</div>
+<!-- __________________________________________________________________________________________ -->
+
+	<!-- Banner -->
+	<section class="bigBanner"> 
+		<figure class="fixBg">
+			<div class="text"><p>ABOUT US </p></div>
+			<figure class="img_witch" title="Image of the witch.">
+				<img src="images/CH_witch.png" id="witch" alt= "Image of the witch."/> 
+			</figure>
+		</figure>
+	</section>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar" id="navbar"> 
+	
+		<li class="navBtn active" id="navBtn1" onclick = "window.location.href='About_us.html';">
+		<span>	&nbsp;&nbsp;About Us&nbsp;&nbsp;              </span></li>
+						
+		<li class="navBtn" id="navBtn2" onclick = "window.location.href='Health_tips.html';">
+		<span>	&nbsp;&nbsp;Health Tips&nbsp;&nbsp;           </span></li>
+						
+		<li class="navBtn" id="navBtn3" onclick = "window.location.href='Sweets_Desserts.html';">
+		<span>	&nbsp;&nbsp;Sweeets & Desserts &nbsp;&nbsp;   </span></li>
+		
+		<li class="navBtn" id="navBtn4" onclick = "window.location.href='DIY_ideas.html';">
+		<span>	&nbsp;&nbsp;&nbsp;DIY Ideas&nbsp;&nbsp;&nbsp; </span></li>
+						
+		<li class="navBtn" id="navBtn5" onclick = "window.location.href='Decor_house.html';">
+		<span>	&nbsp;&nbsp;Decorate Your House&nbsp;&nbsp;   </span></li>
+						
+	</nav>
+
+	<!-- Content(the gray retangle) -->
+	<div class="mid" id="mid">
+		<div class="bg">
+			<div class="bg_content">
+
+				<!-- About us list -->
+				<aside class = "List">
+					<ol id="tipTitle">
+						<span> <b> SECTIONS </b> </span>
+						
+						<li id= "tipMark" onclick= "scrollToTips('tip', 1, 160)">What is WITCHY CANDY?</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 2, 170)">Backstory</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 3, 160)">Why Healthy Desserts?</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 4, 160)">References</li>
+					</ol>
+				</aside>
+				
+				<!-- About us paragraphs -->
+				<section class = "Tips" > 
+					<article class = "tips" id = "tip1"> 
+						<header> 1. What is WITCHY CANDY? &nbsp;&#x1F9D9;&#x1f3fb;&#x200D;&#x2640;&#xFE0F;</header>
+						<p> WitchyCandy.com is a website educating kids from 5-12-year olds, about  
+							healthy candies and desserts. From this website, audiences could expect 
+							fun facts of eating healthily, which is categorized into “About Us”, 
+							“Health Tips”, “Sweets & Dessert”, “DIY Ideas” and “Decorate Your House”.</p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip2"> 
+						<header> 2. Backstory &#x1F4D4;</header>
+						<p align="center"> The story is the continue of <strong>Hansel & Gretel</strong>: <br/>
+							<blockquote>“After the witch was burnt to ashes in the oven, Hansel and his sister 
+							Gretel discovered a treasure within the gingerbread house: healthy 
+							candies recipes the witch is trying to invent in order to stay healthy.”</p>
+							</blockquote>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip3"> 
+						<header> 3. Why Healthy Desserts?
+							<img id="custard" class="candy hiddenItem" src = "images/custard.png" onclick="updateCandyList(5)"
+								height = "38px" width = "40px" />
+						</header>
+						<p> “Healthy Desserts” will be an interesting and meaningful topic for kids 
+							as many of them likes to eat sweets and snacks. <br/>
+							However, they are taught in school that eating candies would cause a lot of 
+							health problems. This website shows them that just because a food is sweet 
+							does not mean it is unhealthy, but certain actions like using dental floss 
+							after eating and picking the right food should also be taken before or after 
+							eating.</p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip4"> 
+						<header> 4. References&nbsp;&#x1f4c3;</header>
+						<p> Lang, A. (1898). Hansel and Gretel. The Blue Fairy Book, v.24 p.251-258<br/>
+
+						<p> Zelman, K. (2009). Sweets and Treats in a Healthy Diet. Retrieved from
+						<a href="https://www.webmd.com/diet/features/sweets-treats-healthy-diet#1">
+							https://www.webmd.com/diet/features/sweets-treats-healthy-diet#1</a><br/>
+						
+						<p> Crozier, S. Preston, A. Hurst, Jeffrey. Payne, M. Mann, J. Hainly, L. Miller, D. (7 February 2011). 
+							Cacao seeds are a "Super Fruit": A comparative analysis of various fruit powders and products. 
+							Chemistry Central Journal 2011, 5:5 <br/>
+						
+						<p> Gunnars, Kris. (June 25, 2018). 7 Proven Health Benefits of Dark Chocolate. Retrieved from 
+						<a href="https://www.healthline.com/nutrition/7-health-benefits-dark-chocolate">
+							https://www.healthline.com/nutrition/7-health-benefits-dark-chocolate</a><br/>
+						
+						<p> Myrick, Richard. (n.d.). Dark Chocolate Fun Facts. Retrieved from 
+						<a href="https://mobile-cuisine.com/did-you-know/dark-chocolate-fun-facts/">
+							https://mobile-cuisine.com/did-you-know/dark-chocolate-fun-facts/</a><br/>
+						
+						<p> Myrick, Richard. (n.d.). Yogurt Fun Facts. Retrieved from
+						<a href="https://mobile-cuisine.com/did-you-know/yogurt-fun-facts/">
+							https://mobile-cuisine.com/did-you-know/yogurt-fun-facts/</a><br/>
+						
+						<p> Heitz, David. (August 17, 2016). Health Benefits of Greek Yogurt. Retrieved from 
+						<a href="https://www.healthline.com/health/food-nutrition/greek-yogurt-benefits">
+							https://www.healthline.com/health/food-nutrition/greek-yogurt-benefits</a><br/>
+							
+						<p> Petre, Alina. (February 5, 2019). Can You Eat Honeycomb? Benefits, Uses, and Dangers. Retrieved from 
+						<a href="https://www.healthline.com/nutrition/raw-honeycomb#dangers">
+							https://www.healthline.com/nutrition/raw-honeycomb#dangers</a><br/>
+						
+						<p> PerfectBee LLC. (November 8 2018). The Secrets of Honeycomb. Retrieved from 
+						<a href="https://www.perfectbee.com/learn-about-bees/the-science-of-bees/cells-in-honeycomb">
+							https://www.perfectbee.com/learn-about-bees/the-science-of-bees/cells-in-honeycomb</a><br/>
+						
+						<p> Spritzler, Franziska. (December 20, 2016). 11 Impressive Health Benefits of Salmon. Retrieved from
+						<a href="https://www.healthline.com/nutrition/11-benefits-of-salmon#section11">
+							https://www.healthline.com/nutrition/11-benefits-of-salmon#section11</a><br/>
+							
+						<p> Crochetiere, Heather. (March 19, 2015). Did you know? 10 Amazing things about salmon. Retrieved from
+						<a href="https://blog.wwf.ca/blog/2015/03/19/did-you-know-10-amazing-things-about-salmon/">
+							https://blog.wwf.ca/blog/2015/03/19/did-you-know-10-amazing-things-about-salmon/</a><br/>
+							
+						<p> Flay, Bobby. (n.d.). Dark Chocolate Mousse. Retrieved from 
+						<a href="https://www.foodnetwork.com/recipes/bobby-flay/dark-chocolate-mousse-recipe-1917102">
+							https://www.foodnetwork.com/recipes/bobby-flay/dark-chocolate-mousse-recipe-1917102</a><br/>
+							
+						<p> Sweet Peas and saffron. (March 29, 2016). Greek Yogurt Key Lime Cheesecakes. Retrieved from
+						<a href="https://sweetpeasandsaffron.com/greek-yogurt-key-lime-cheesecakes/">
+							https://sweetpeasandsaffron.com/greek-yogurt-key-lime-cheesecakes/</a><br/>
+							
+						<p> Chang, Joanne. (August 3, 2015). Honey Cashew Morning Buns. Retrieved from
+						<a href="https://food52.com/recipes/37446-honey-cashew-morning-buns">
+							https://food52.com/recipes/37446-honey-cashew-morning-buns</a><br/>
+						
+						<p> weightwatchers reimagined. (n.d.). Smoked Salmon and Cream Cheese Muffin. Retrieved from
+						<a href="https://www.weightwatchers.com/us/recipe/smoked-salmon-and-cream-cheese-muffin/5b7eb7dafa6aed083054a080">
+							https://www.weightwatchers.com/us/recipe/smoked-salmon-and-cream-cheese-muffin/5b7eb7dafa6aed083054a080</a><br/>
+					</article>
+				</section>
+			</div>
+		</div>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+	</div>
+	
+	<!-- Floating count box -->
+	<div id="countPopup"> 
+		<button id="resetBtn" onclick="localStorage.clear(); location.reload();">&#8635;</button>
+		<p>Find all the witch's candies within the website!</p>
+		<p id="countText"><span id="count">0</span> / 6
+		<img class="hiddenItem" src= "images/candy.png" /> collected!</p>
+	</div>
+
+	<!-- Copyright -->
+	<footer>
+		<span>Copyright &#xa9; 2019 Witchy Candy. All rights reserved.</span>
+	</footer>
+
+</body>
+</html>
+

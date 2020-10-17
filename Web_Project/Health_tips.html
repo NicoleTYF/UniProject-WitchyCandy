@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" onload="setup()">
+
+<head>
+
+    <title>Health Tips</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/ArticlesPages.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="icon" type="image/png" href="images/logo.png"/>
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Noto+Sans|Nunito|
+		Helvetica+Neue|Open+Sans+Condensed:300" rel="stylesheet">
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+</head>
+
+
+
+<body id="body">
+
+	<!-- Tool Bar -->
+    <div class="toolbar" id="toolBar">
+
+        <!-- HOME button on the top-left -->
+		<div id= "home_btn" onclick="window.location.href='index.html'" title="Back to home">
+			<img src="images/logo.png" id="logo" height="64" width="68" 
+				alt= "image of a ginger bread house" /> 
+			<span id= "home_text">HOME</span>
+		</div>
+
+		<!-- LOGO in the middle -->
+		<img src="images/logo_text.png" id="logo_s" height="64" width="74" 
+		title="logo" alt="logo image"/> 
+		
+		<!-- Search and Filter button -->
+		<div class = "toolBarBtns" >
+			<input id="websearchField" type="text" placeholder="Search in this page..." 
+				title="Type in tip content/title" onkeyup="wordSearch(true)"/>
+			
+			<div class="Contact" >
+				<input id="contactBtn" type="image" src="images/filter_white.png" 
+					title="Contact us" alt="contact button"/>
+				<div id="contactWindow">
+				  <p><b>We are looking for feedbacks! &#128150;&#128150;&#128150;</b></p>
+					  &#128231; E-mail: <a href="mailto:witchyCandy@gmail.com">witchyCandy@gmail.com</a><br/>
+					  &#128222; Phone:  234 234 5629 
+				  <p/>
+				  <a href="https://www.facebook.com/public/witchycandy">
+					<img src="images/fb.png" width="30" height="30" title="witchyCandyFB"/></a>  
+				  <a href="https://www.instagram.com/explore/tags/witchycandy/">
+					<img src="images/ins.png" width="30" height="30" title="@witchyCandy"/></a>
+				</div>
+			</div>
+			
+            <input id="websearchbtn" type="image" src="images/search_white.png" 
+				 onclick = "openSearch()" title="search in this page" alt="search"/>
+		</div> 
+    </div>
+
+	
+	<!-- Search Window -->
+	<div class="searchWindow" id="searchWindow">
+	  <div class="searchContent">
+		<form class="container" >	
+		  <button id= "closeSearch" onclick="closeSearch()">&times;</button>
+			<section>
+				<header>RESULT</header>
+				<ul id="searchList">
+				<span id="noResult"> Sorry I cannot find anything you searched, <br/>but I can find hope in you.<br/> (・∀&nbsp;- )~</span>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 1, 160), closeNav()">Dental Floss
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 2, 170), closeNav()">Your Healthy Collection
+						&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 3, 160), closeNav()">Natural Ingredients
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 4, 160), closeNav()">Single Served Desserts
+						&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 5, 130), closeNav()">Signs of Healthy Food
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+					<li id= "tipMark" onclick= "scrollToTips('tip', 6,  70), closeNav()">Fruit-centric Desserts
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+						<span class="searchListContent">...content...</span></li>
+					<hr/>
+				</ul>
+			</section>
+		</form>
+	  </div>
+	</div>
+<!-- __________________________________________________________________________________________ -->
+
+	<!-- Banner -->
+	<section class="bigBanner"> 
+		<figure class="fixBg">
+			<div class="text"><p>HEALTH TIPS </p></div>
+			<figure class="img_witch" title="Image of the witch.">
+				<img src="images/CH_witch.png" id="witch" alt= "Image of the witch."/> 
+			</figure>
+		</figure>
+	</section>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar" id="navbar"> 
+	
+		<li class="navBtn" id="navBtn1" onclick = "window.location.href='About_us.html';">
+		<span>	&nbsp;&nbsp;About Us&nbsp;&nbsp;              </span></li>
+						
+		<li class="navBtn active" id="navBtn2" >
+		<span>	&nbsp;&nbsp;Health Tips&nbsp;&nbsp;           </span></li>
+						
+		<li class="navBtn" id="navBtn3" onclick = "window.location.href='Sweets_Desserts.html';">
+		<span>	&nbsp;&nbsp;Sweeets & Desserts &nbsp;&nbsp;   </span></li>
+		
+		<li class="navBtn" id="navBtn4" onclick = "window.location.href='DIY_ideas.html';">
+		<span>	&nbsp;&nbsp;&nbsp;DIY Ideas&nbsp;&nbsp;&nbsp; </span></li>
+						
+		<li class="navBtn" id="navBtn5" onclick = "window.location.href='Decor_house.html';">
+		<span>	&nbsp;&nbsp;Decorate Your House&nbsp;&nbsp;   </span></li>
+						
+	</nav>
+
+	<!-- Content(the gray retangle) -->
+	<div class="mid" id="mid">
+		<div class="bg">
+			<div class="bg_content">
+
+				<!-- Tip list -->
+				<aside class = "List">
+					<ol id="tipTitle">
+						<span> <b> TIPS </b> </span>
+						
+						<li id= "tipMark" onclick= "scrollToTips('tip', 1, 160)">Dental Floss</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 2, 170)">Your Healthy Collection</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 3, 160)">Natural Ingredients</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 4, 160)">Single Served Desserts</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 5, 130)">Signs of Healthy Food</li>
+						<li id= "tipMark" onclick= "scrollToTips('tip', 6, 70)">Fruit-centric Desserts</li>
+					</ol>
+				</aside>
+				
+				<!-- Tip paragraphs -->
+				<section class = "Tips" > 
+					<article class = "tips" id = "tip1"> 
+						<header> 1. Use Dental Floss <img src = "images/tooth.png" height = "30px" width = "30px" /></header>
+						<p> It is important to use it after eating dessert, otherwise the food residue will 
+							stick to your teeth. It will produce a chemical that consumes the surface of 
+							your teeth. If the teeth was not cleaned properly, detrimental health problems
+							like tooth decay will occur.</p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip2"> 
+						<header> 2. Have your collection of healthy desserts <br/>in a notbook &#x1F4D4;</header>
+						<p> Here is a good tip, keep a collection of desserts and recipes that you think is
+							healthy, delicious and easy to make. Since we may not be able to remember all 
+							the desserts names, recording it in a diary or a notebook could be useful. Don't
+							forget to also jot down remarks about your experience with these healthy food. </p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip3"> 
+						<header> 3. Try Natural Ingredients, 
+							<img id="salad" class="candy hiddenItem" src = "images/salad.png" onclick="updateCandyList(0)"
+								height = "34px" width = "34px" />
+							<br/>Avoid Artificial Ingredients &#x1F367;</header>
+						<p> Go natural, go fresh isn't something strange when it comes to being healthy. 
+							Natural and fresh food provides much more nutrients without side effects. You 
+							could browse our "Sweets & Desserts" page to find the natural dessert that you
+							like, they are tagged with "Natural" in the bottom of their details page.</p>
+						 
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip4"> 
+						<header> 4. Buy Single Served Desserts 
+							<img id="bowl" class="candy hiddenItem" src = "images/bowl.png" onclick="updateCandyList(1)"
+								height = "30px" width = "30px" /></header>
+						<p> Remember a time when you open the fridge for ice-cream, after putting a scope,
+							you can't help but put another one? "One more scope won't hurt". No,stop that,
+							if you allow this to happen, then you would lose self-control to these desserts.
+							One way to solve this is to buy single-served desserts(e.g. a cone of ice-cream).</p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip5"> 
+						<header> 5. Look for Common Signs of Healthy Food &#128077;&#127995;</header>
+						<p> Common signs of healthy food contains high calorie to fat ratio. Look at the 
+							nutrient label, or the certificated labels on the food package. There are various
+							health labels that represents different benefitial features of the food. You can
+							also browse our "DIY Ideas" of how to choose healthy ingrediants for desserts.</p>
+					</article>
+					
+					<hr/>
+					
+					<article class = "tips" id = "tip6"> 
+						<header> 6. Try Fruit-centric Desserts 
+							<img src = "images/apple.png" height = "30px" width = "30px" /></header>
+						<p> You may not believe this, but trust me: Any fruits tastes great with chocolate.
+							It is important to use it after dinner, otherwise tooth decay will destroy teeth.
+							It is important to use it after dinner, otherwise tooth decay will destroy teeth.
+							It is important to use it after dinner, otherwise tooth decay will destroy teeth.</p>
+					</article>
+				</section>
+			</div>
+		</div>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+	</div>
+	
+	<!-- Floating count box -->
+	<div id="countPopup" alt="Hidden candies game popupbox" title="Find all the hidden candies!"> 
+		<button id="resetBtn" title="Play again" onclick="localStorage.clear(); 
+			location.reload();">&#8635;</button>
+		<p>Find all the witch's candies within the website!</p>
+		<p id="countText"><span id="count">0</span> / 6
+		<img class="hiddenItem" src= "images/candy.png" alt="image of a candy"/> collected!</p>
+	</div>
+
+	<!-- Copyright -->
+	<footer>
+		<span>Copyright &#xa9; 2019 Witchy Candy. All rights reserved.</span>
+	</footer>
+
+</body>
+</html>
+
