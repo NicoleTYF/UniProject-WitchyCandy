@@ -23,7 +23,7 @@
   <td> 
     <b>Health Tips<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Health_tips.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/ArticlesPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>Health Tips for children </li><li>Side navigation for easier reading </li></td>
+  <td width="270"><li>Health Tips for children </li><li>Side navigation for easier reading </li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_healthTips_screenshot.PNG" height="200"/></td>
 </tr>
   
@@ -31,7 +31,7 @@
   <td> 
     <b>Search window<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Health_tips.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/js/script.js">js</a>)</b>  
   </td>
-  <td width="350"><li>Word search in Health Tips and About Us page </li></td>
+  <td width="270"><li>Word search in Health Tips and About Us page </li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_search_screenshot.PNG" height="200"/></td>
 </tr>
   
@@ -39,7 +39,7 @@
   <td> 
     <b>Healthy Sweets and Desserts<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Sweets_Desserts.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/CellPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>A form for enterprises to choose what data they want to buy </li></td>
+  <td width="270"><li>A form for enterprises to choose what data they want to buy </li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_sweet_screenshot.PNG" height="200"/></td>
 </tr>
   
@@ -47,7 +47,7 @@
   <td> 
     <b>DIY Recipes<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/DIY_ideas.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/CellPages.css">css</a>)</b>  
   </td>
-  <td width="350"><li>List dessert receipes children can try making with their parents </li><li>Like the recipe by pressing the button with a heart icon</li></td>
+  <td width="270"><li>List dessert receipes children can try making with their parents </li><li>Like the recipe by pressing the button with a heart icon</li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_recipes_screenshot.PNG" height="200"/></td>
 </tr>
 
@@ -55,7 +55,7 @@
   <td> 
     <b>Decorating your candy house<br>(<a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/Decor_house.html">html</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/css/Decor_house.css">css</a>, <a href="https://github.com/NicoleTYF/WitchyCandy/blob/main/Web_Project/js/script.js">js</a>)</b>  
   </td>
-  <td width="350"><li>Drag and Drop healthy sweets and desserts to decorate the candy house </li><li>Drag and Drop healthy sweets and desserts </li></td>
+  <td width="270"><li>Drag and Drop healthy sweets and desserts to decorate the candy house </li><li>Drag and Drop healthy sweets and desserts </li></td>
   <td><img src="https://github.com/NicoleTYF/WitchyCandy/blob/main/WC_decor_screenshot.PNG" height="200"/></td>
 </tr>
 
